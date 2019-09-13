@@ -1,0 +1,5 @@
+---
+- name: clear partitioner-range_repair.log
+  file: 
+    path: "{{ cassandra3x_log_path }}/partitioner-range_repair.log"
+    state: absent

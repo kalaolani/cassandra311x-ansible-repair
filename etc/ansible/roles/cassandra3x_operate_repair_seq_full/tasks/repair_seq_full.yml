@@ -1,0 +1,3 @@
+---
+- name: nodetool repair --sequential --full for the node
+  script: nodetool-repair-seq-full.sh {{ cassandra3x_remote_jmx_user }} {{ cassandra3x_remote_jmx_pass }} {{ cassandra3x_log_path }}/seq_full_repair.log

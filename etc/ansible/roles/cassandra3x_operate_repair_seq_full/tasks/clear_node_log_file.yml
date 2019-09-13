@@ -1,0 +1,5 @@
+---
+- name: clear seq_full_repair.log
+  file: 
+    path: "{{ cassandra3x_log_path }}/seq_full_repair.log"
+    state: absent

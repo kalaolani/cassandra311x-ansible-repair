@@ -1,0 +1,8 @@
+---
+# ansible-playbook /etc/ansible/playbooks/cassandra3x/operate_rolling_full_partitioner-range_repair_by_node.yml --extra-vars "target=ansible_inventory_hosts"
+- hosts: "{{ target | default('FAIL') }}"
+  gather_facts: false
+  any_errors_fatal: true
+  serial: 1
+  roles:
+    - cassandra3x_operate_repair_full_partitioner-range

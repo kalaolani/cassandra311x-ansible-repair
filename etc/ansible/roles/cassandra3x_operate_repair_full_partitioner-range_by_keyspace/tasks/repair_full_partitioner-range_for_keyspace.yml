@@ -1,0 +1,3 @@
+---
+- name: "nodetool repair --partitioner-range for the keyspace: {{ keyspace_name }}"
+  script: nodetool-repair-partitioner-range-keyspace.sh {{ cassandra3x_remote_jmx_user }} {{ cassandra3x_remote_jmx_pass }} {{ keyspace_name }} {{ cassandra3x_log_path }}/partitioner-range_repair_{{ keyspace_name }}.log
